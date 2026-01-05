@@ -1,78 +1,136 @@
 body {
   font-family: Arial, sans-serif;
-  background: #f4f4f4;
+  background: #eef2f7;
   margin: 0;
   color: #222;
 }
 
-header, nav, main, footer {
-  max-width: 900px;
-  margin: 12px auto;
-  background: #fff;
-  padding: 15px;
-  border: 1px solid #ddd;
+.container {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 0 14px;
+}
+
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid #d9dde3;
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0;
 }
 
 .logo {
-  height: 50px;
+  height: 52px;
 }
 
-nav ul {
+.tagline {
+  font-weight: bold;
+  margin: 0;
+}
+
+.site-nav {
+  background: #ffffff;
+  border-bottom: 1px solid #d9dde3;
+}
+
+.nav-row {
+  padding: 12px 0 14px;
+}
+
+.nav-links {
   list-style: none;
   padding: 0;
-  margin: 8px 0 0;
+  margin: 0 0 10px;
 }
 
-nav li {
+.nav-links li {
   display: inline-block;
-  margin-right: 12px;
+  margin-right: 14px;
 }
 
-nav a {
+.nav-links a {
   text-decoration: none;
 }
 
-nav a:hover {
+.nav-links a:hover {
   text-decoration: underline;
 }
 
 .controls {
-  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .controls button {
-  margin: 6px 6px 0 0;
   padding: 8px 12px;
-  border: 1px solid #333;
-  background: #eee;
+  border: 1px solid #2b2b2b;
+  background: #f3f3f3;
   cursor: pointer;
 }
 
 .controls button:hover {
-  background: #ddd;
+  background: #e6e6e6;
 }
 
-article, aside {
+main {
+  padding: 16px 0 6px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #d9dde3;
+  padding: 14px;
   margin: 12px 0;
-  padding: 12px;
-  border: 1px solid #eee;
 }
 
-#missionImage {
-  margin-top: 10px;
+.card h1 {
+  margin: 0 0 8px;
 }
 
-#videoBox {
-  margin-top: 10px;
+.card p {
+  margin: 0 0 10px;
 }
 
-aside img {
-  max-width: 100%;
-  height: auto;
+.mission-img {
   margin-top: 8px;
 }
 
-.alt-bg {
-  background: #e8f2ff;
+.sidebar h4 {
+  margin: 0 0 8px;
 }
 
+.aside-img {
+  max-width: 100%;
+  height: auto;
+  margin: 8px 0;
+}
+
+.video-box {
+  margin-top: 10px;
+}
+
+.site-footer {
+  background: #ffffff;
+  border-top: 1px solid #d9dde3;
+  margin-top: 18px;
+  padding: 16px 0;
+}
+
+.footer-links {
+  margin: 0 0 10px;
+}
+
+.fineprint {
+  margin: 0;
+  font-size: 13px;
+  color: #444;
+}
+
+.alt-bg {
+  background: #e8f7ef;
+}
