@@ -1,55 +1,139 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="Description" content="Sample Web site for learning HTML5 and CSS3"/>
-<link rel="shortcut icon" href="http://www.habitat.org/sites/default/files/favicon.ico" type="image/vnd.microsoft.icon" />
-<title>Habitat for Humanity Int&#039;l</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="Description" content="Sample Web site for learning HTML5 and CSS3"/>
+  <link rel="shortcut icon" href="http://www.habitat.org/sites/default/files/favicon.ico" type="image/vnd.microsoft.icon" />
+  <link rel="stylesheet" href="styles.css"/>
+  <title>Habitat for Humanity Int&#039;l</title>
 </head>
+
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<header>
-<img src="media/logo.png" alt="Habitat for Humanity logo" />
-</header>
+  <header class="site-header">
+    <div class="header-inner">
+      <img class="brand-logo" src="logo.png" alt="Habitat for Humanity logo" />
+      <div class="header-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle theme" title="Toggle theme">
+          🌓
+        </button>
 
-<nav>
-<h4>Simple, decent, affordable housing</h4><ul>
-<li><a href="http://www.habitat.org/how/about_us.aspx">Learn more</a></li>
-<li><a href="http://www.habitat.org/getinv/volunteer_programs.aspx">Volunteer</a></li>
-<li><a href="http://www.habitat.org/gov">Advocate</a></li>
-<li><a href="https://www.habitat.org/cd/giving/donate.aspx?r=r&amp;link=1">Donate</a></li>
-</ul>
-</nav> 
+        <button class="icon-btn" id="menuToggle" type="button" aria-controls="siteNav" aria-expanded="false" aria-label="Open menu">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
 
-<article>
-<h1>Our Mission</h1>
-<p>Habitat for Humanity believes that every man, woman and child should have a decent, safe and affordable place to live. We build and repair houses all over the world using volunteer labor and donations. Our partner families purchase these houses through no-profit, no-interest mortgage loans or innovative financing methods.</p>
-<img src="media/menu_icon_default.jpg" width="212" height="121" alt="Silhouettes of Habitat for Humanity workers" />
-</article> 
+  <nav id="siteNav" class="site-nav" aria-label="Primary">
+    <h4>Simple, decent, affordable housing</h4>
+    <ul>
+      <li><a href="http://www.habitat.org/how/about_us.aspx" target="_blank" rel="noopener">Learn more</a></li>
+      <li><a href="http://www.habitat.org/getinv/volunteer_programs.aspx" target="_blank" rel="noopener">Volunteer</a></li>
+      <li><a href="http://www.habitat.org/gov" target="_blank" rel="noopener">Advocate</a></li>
+      <li><a href="https://www.habitat.org/cd/giving/donate.aspx?r=r&amp;link=1" target="_blank" rel="noopener">Donate</a></li>
+    </ul>
+  </nav>
 
-<article>
-<h1>Why We Build</h1>
-<p>There are nearly 2 billion people around the world who live in slum housing and more than 100 million are homeless. Families left homeless by natural disasters, war and civil unrest often face dire housing situations as they struggle to rebuild their lives. We provide shelter and housing assistance to help these families recover.</p>
-</article>
+  <main id="main" class="layout">
+    <section class="content">
+      <article class="card" id="mission">
+        <h1>Our Mission</h1>
+        <p>
+          Habitat for Humanity believes that every man, woman and child should have a decent, safe and affordable place to live.
+          We build and repair houses all over the world using volunteer labor and donations. Our partner families purchase these
+          houses through no-profit, no-interest mortgage loans or innovative financing methods.
+        </p>
 
-<article>
-<h1>Advocacy in Action</h1>
-<p>Volunteer Amy Miles lends her voice in support of Habitat's advocacy efforts and Global Village trips. Use the audio controls below to hear her stories.</p> 
-</article>
+        <div class="media-row">
+          <img
+            class="feature-img js-lightbox"
+            src="menu_icon_default.jpg"
+            width="212"
+            height="121"
+            alt="Silhouettes of Habitat for Humanity workers"
+            loading="lazy"
+          />
+          <button class="btn" id="confettiBtn" type="button" aria-label="Celebrate">
+            Celebrate 🎉
+          </button>
+        </div>
+      </article>
 
-<aside>
-<h4>Build Your Community</h4>
-<a href="http://www.habitat.org/youthprograms/ages_14_25/ages_14_25_default.aspx"><img src="media/YP3_14to25.jpg" alt="Habitat for Humanity logo"/></a>
-<p><a href="http://www.habitat.org/youthprograms/ages_14_25/ages_14_25_default.aspx">Start today</a> to become the leaders of Habitat tomorrow! </p> 
-</aside> 
+      <article class="card" id="why">
+        <h1>Why We Build</h1>
+        <p>
+          There are nearly 2 billion people around the world who live in slum housing and more than 100 million are homeless.
+          Families left homeless by natural disasters, war and civil unrest often face dire housing situations as they struggle
+          to rebuild their lives. We provide shelter and housing assistance to help these families recover.
+        </p>
 
-<footer>
-<a href="http://www.habitat.org/how/"> Learn About Habitat</a> | 
-<a href="http://www.habitat.org/intl/">Where We Build</a> | 
-<a href="http://www.habitat.org/support/default.aspx">Support Habitat</a> | 
-<a href="http://www.habitat.org/stories_multimedia/">Stories and Multimedia</a><br/><br/> 
-<p>&#169;2014 Habitat for Humanity&#174; International. All rights reserved. "Habitat for Humanity&#174;" is a registered service mark owned by Habitat for Humanity International. Habitat&#174; is a service mark of Habitat for Humanity International.</p>
-</footer>
+        <div class="tip">
+          <strong>Quick interaction:</strong> highlight any sentence by selecting text — the page will “save” it as a note.
+        </div>
 
-</body>
-</html>
+        <div class="notes">
+          <h3>Saved Notes</h3>
+          <ul id="notesList" aria-live="polite"></ul>
+          <button class="btn btn-ghost" id="clearNotes" type="button">Clear notes</button>
+        </div>
+      </article>
+
+      <article class="card" id="advocacy">
+        <h1>Advocacy in Action</h1>
+        <p>
+          Volunteer Amy Miles lends her voice in support of Habitat's advocacy efforts and Global Village trips.
+          Use the audio controls below to hear her stories.
+        </p>
+
+        <div class="media-block">
+          <audio id="storyAudio" controls preload="metadata">
+            <source src="habitat_audio.mp3" type="audio/mpeg"/>
+            Your browser does not support the audio element.
+          </audio>
+
+          <div class="mini-controls" aria-label="Audio extras">
+            <button class="btn btn-ghost" id="audioRewind" type="button">⏪ 10s</button>
+            <button class="btn btn-ghost" id="audioForward" type="button">10s ⏩</button>
+            <button class="btn btn-ghost" id="audioSpeed" type="button" data-speed="1">Speed: 1x</button>
+          </div>
+        </div>
+
+        <details class="video-wrap">
+          <summary>Watch a short Habitat clip</summary>
+          <video id="habitatVideo" controls preload="metadata" poster="default-1_15.jpg">
+            <source src="habitat_video_Web_720.mp4" type="video/mp4"/>
+            Your browser does not support the video tag.
+          </video>
+        </details>
+      </article>
+    </section>
+
+    <aside class="sidebar">
+      <div class="card">
+        <h4>Build Your Community</h4>
+        <a href="http://www.habitat.org/youthprograms/ages_14_25/ages_14_25_default.aspx" target="_blank" rel="noopener">
+          <img class="aside-img" src="YP3_14to25.jpg" alt="Youth programs: ages 14 to 25" loading="lazy"/>
+        </a>
+        <p>
+          <a href="http://www.habitat.org/youthprograms/ages_14_25/ages_14_25_default.aspx" target="_blank" rel="noopener">
+            Start today
+          </a>
+          to become the leaders of Habitat tomorrow!
+        </p>
+
+        <div class="progress-box" aria-label="Fun progress meter">
+          <div class="progress-meta">
+            <span>Community energy</span>
+            <span id="energyLabel">65%</span>
+          </div>
+          <div class="progress-track" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" id="energyBar" style="width:65%"></div>
+          </div>
+          <button class="btn" id="boostEnergy" type="button">Boost +5</button>
+        </div>
+      </div>
+
+      <div c
