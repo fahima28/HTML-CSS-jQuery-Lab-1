@@ -1,12 +1,14 @@
 $(function () {
+  $("#missionSection").hide();
   $("#videoBox").hide();
 
   $("#bgBtn").on("click", function () {
     $("body").toggleClass("alt-bg");
   });
 
-  $("#imgBtn").on("click", function () {
-    $("#missionImage").slideToggle(200);
+  $("#revealMissionBtn").on("click", function () {
+    $("#missionSection").slideDown(250);
+    $(this).prop("disabled", true).text("Mission Revealed!");
   });
 
   $("#audioBtn").on("click", function () {
@@ -15,15 +17,11 @@ $(function () {
     else audio.pause();
   });
 
-  $("#videoBtn").on("click", function () {
-    $("#videoBox").slideToggle(200, function () {
+  $("#showVideoBtn").on("click", function () {
+    $("#videoBox").slideDown(250, function () {
       const video = $("#habitatVideo").get(0);
-      if ($(this).is(":visible")) video.play();
-      else {
-        video.pause();
-        video.currentTime = 0;
-      }
+      video.play();
     });
+    $(this).prop("disabled", true).text("Video Shown!");
   });
 });
-
