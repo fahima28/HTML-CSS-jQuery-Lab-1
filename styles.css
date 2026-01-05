@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background: #eef2f7;
+  background: #e6eaf2;
   margin: 0;
   color: #222;
 }
@@ -54,6 +54,7 @@ body {
 
 .nav-links a {
   text-decoration: none;
+  color: #0055aa;
 }
 
 .nav-links a:hover {
@@ -74,7 +75,7 @@ body {
 }
 
 .controls button:hover {
-  background: #e6e6e6;
+  background: #e1e1e1;
 }
 
 main {
@@ -132,5 +133,5 @@ main {
 }
 
 .alt-bg {
-  background: #e8f7ef;
+  background: #dcefe6;
 }
