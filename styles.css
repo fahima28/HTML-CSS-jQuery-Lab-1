@@ -1,1 +1,78 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  color: #222;
+}
+
+header, nav, main, footer {
+  max-width: 900px;
+  margin: 12px auto;
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+}
+
+.logo {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 12px;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.controls {
+  margin-top: 12px;
+}
+
+.controls button {
+  margin: 6px 6px 0 0;
+  padding: 8px 12px;
+  border: 1px solid #333;
+  background: #eee;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background: #ddd;
+}
+
+article, aside {
+  margin: 12px 0;
+  padding: 12px;
+  border: 1px solid #eee;
+}
+
+#missionImage {
+  margin-top: 10px;
+}
+
+#videoBox {
+  margin-top: 10px;
+}
+
+aside img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 8px;
+}
+
+.alt-bg {
+  background: #e8f2ff;
+}
 
